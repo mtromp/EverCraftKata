@@ -10,3 +10,8 @@ files could used the standard `#include <gtest/gtest.h>`
 
 The tests are built as an application. QT does have the ability to create autotests when using qmake. Perhaps at some
 later time I will see how to do that with this project.
+
+**May 15, 2018**
+
+I achieved my goal to learn how to setup the project using CMake and google test.
+I might not complete this kata.
