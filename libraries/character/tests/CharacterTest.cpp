@@ -1,6 +1,10 @@
+#include "Character.h"
 #include <gtest/gtest.h>
 
-TEST(characterTest, characterNameCanBeSet)
+TEST(characterTest, characterNameCanBeSetAndRetrieved)
 {
-    EXPECT_FALSE(true);
+    Character character;
+    character.Name("holodigm");
+
+    EXPECT_EQ("holodigm", character.GetName());
 }

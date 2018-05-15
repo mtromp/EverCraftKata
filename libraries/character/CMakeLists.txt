@@ -7,12 +7,12 @@ INCLUDE_DIRECTORIES( ${INCLUDE_DIRS} )
 
 # ##########################################
 SET( INCLUDE_FILES
-        include/character.h
+        include/Character.h
 )
 
 # ##########################################
 SET( SOURCE_FILES
-        src/character.cpp
+        src/Character.cpp
 )
 
 # ##########################################
@@ -27,7 +27,7 @@ ADD_LIBRARY( character
 
 ADD_EXECUTABLE( characterTests
         tests/main.cpp
-        tests/characterTest.cpp
+        tests/CharacterTest.cpp
 )
 TARGET_LINK_LIBRARIES( characterTests
         character

@@ -6,6 +6,10 @@ CMAKE_MINIMUM_REQUIRED( VERSION 2.8.3 )
 # Start the project.
 PROJECT( EverCraftKata )
 
+# ##########################################
+# get rid of policy CMP0042 warning on Mac
+SET ( CMAKE_MACOSX_RPATH 1 )
+
 # ###############################################
 # Find the threading package for this machine.
 # Needed by gtest
