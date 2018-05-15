@@ -9,18 +9,27 @@ TEST(characterTest, characterNameCanBeSetAndRetrieved)
     EXPECT_EQ("holodigm", character.GetName());
 }
 
+TEST(characterTest, characterAlignmentIsNeutralWhenConstructed)
+{
+    Character character;
+
+    EXPECT_EQ("Neutral", character.GetAlignment());
+}
+
 TEST(characterTest, characterAlignmentCanBeSetAndRetrieved)
 {
     Character character;
-    character.Alignment("gobbledygook");
+    character.Alignment(Character::Evil);
 
-    EXPECT_EQ("gobbledygook", character.GetAlignment());
+    EXPECT_EQ("Evil", character.GetAlignment());
 }
 
+// Make this a parameterized test that goes through all values of
+//   Character::AlignmentValues
 TEST(characterTest, characterAlignmentCanOnlyBeGoodEvilOrNeutral)
 {
     Character character;
-    character.Alignment("gobbledygook");
+    character.Alignment(Character::Good);
 
     std::string actualAlignment = character.GetAlignment();
 

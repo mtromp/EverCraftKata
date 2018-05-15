@@ -2,7 +2,7 @@
 
 Character::Character()
 {
-
+    this->CharacterAlignment = Character::Neutral;
 }
 
 void Character::Name(std::string name)
@@ -15,12 +15,17 @@ std::string Character::GetName()
     return this->CharacterName;
 }
 
-void Character::Alignment(std::string alignment)
+void Character::Alignment(AlignmentValues alignment)
 {
     this->CharacterAlignment = alignment;
 }
 
 std::string Character::GetAlignment()
 {
-    return this->CharacterAlignment;
+    switch (this->CharacterAlignment)
+    {
+    case Character::Good : return "Good";
+    case Character::Evil : return "Evil";
+    case Character::Neutral : return "Neutral";
+    }
 }

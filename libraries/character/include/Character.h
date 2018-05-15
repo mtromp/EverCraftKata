@@ -6,14 +6,18 @@
 class Character
 {
 public:
+    // enum with valid alignment values
+    enum AlignmentValues { Good, Evil, Neutral };
+
     Character();
     void Name(std::string name);
     std::string GetName();
-    void Alignment(std::string alignment);
+    void Alignment(AlignmentValues);
     std::string GetAlignment();
+
 private:
     std::string CharacterName;
-    std::string CharacterAlignment;
+    AlignmentValues CharacterAlignment;
 };
 
 #endif // CHARACTER_H
