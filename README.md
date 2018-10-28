@@ -15,3 +15,11 @@ later time I will see how to do that with this project.
 
 I achieved my goal to learn how to setup the project using CMake and google test.
 I might not complete this kata.
+
+**Oct 28, 2018**
+
+Learned more about organizing cmake files while working on the ray-tracer-challenge. Some useful links:
+
+- https://www.slideshare.net/DanielPfeifer1/effective-cmake
+- https://www.youtube.com/watch?v=rLopVhns4Zs&feature=youtu.be  # the video associated with the slides
+- https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/ # a blog post with examples
