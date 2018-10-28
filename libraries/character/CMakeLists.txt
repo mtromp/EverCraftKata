@@ -1,43 +1,20 @@
-# ##########################################
-SET( INCLUDE_DIRS
-        ${CMAKE_CURRENT_LIST_DIR}/include
-)
-INCLUDE_DIRECTORIES( ${INCLUDE_DIRS} )
+add_library(character SHARED "")
 
-
-# ##########################################
-SET( INCLUDE_FILES
-        include/Character.h
-)
-
-# ##########################################
-SET( SOURCE_FILES
+target_sources(
+    character
+    PRIVATE
         src/Character.cpp
-)
+    PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/include/Character.h
+    )
 
-# ##########################################
-ADD_LIBRARY( character
-        SHARED
-        ${INCLUDE_FILES}
-        ${SOURCE_FILES}
-)
+target_include_directories(
+    character
+    PUBLIC
+        include
+    )
 
 # ##########################################
 # enable unit test building and running
 
-ADD_EXECUTABLE( characterTests
-        tests/main.cpp
-        tests/CharacterTest.cpp
-)
-TARGET_LINK_LIBRARIES( characterTests
-        character
-        gmock
-)
-
-ADD_TEST( NAME
-        characterTests
-        COMMAND
-        characterTests
-)
-
-
+add_subdirectory( tests )

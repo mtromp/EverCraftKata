@@ -1,2 +1,2 @@
 # Specify the libraries that make up the application
-ADD_SUBDIRECTORY( libraries/character )
+add_subdirectory( character )
