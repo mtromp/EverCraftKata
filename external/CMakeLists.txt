@@ -4,13 +4,13 @@
 #
 
 # specify the external tools that are needed to be built
-ADD_SUBDIRECTORY( external/googletest-release-1.8.0 )
+ADD_SUBDIRECTORY( external/googletest )
 
 # ##################################
 # set some things to make it easy to use gtest and gmock
 SET ( GMOCK_INCLUDE_DIRS
-        ${CMAKE_CURRENT_SOURCE_DIR}/googletest-release-1.8.0/googlemock/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/external/googletest-release-1.8.0/googletest/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/googletest/googlemock/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/external/googletest/googletest/include
     )
 
 # Add the gmock include directories. This will all the
